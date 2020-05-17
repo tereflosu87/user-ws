@@ -1,10 +1,13 @@
 package com.ecomerce.userws.mapper;
 
+import com.ecomerce.userws.dto.User;
+import com.ecomerce.userws.dto.UserRequest;
+
 @Mappper
 public interface UserMapper {
 
-    PersonaMapper INSTANCIA= Mappers.getMapper(PersonaMapper.class);
+    UserMapper INSTANCIA= Mappers.getMapper(UserMapper.class);
 
-    PersonaDTO personaToPersonaDto(Persona persona);
+    UserRequest userToUserDto(User persona);
 
 }
