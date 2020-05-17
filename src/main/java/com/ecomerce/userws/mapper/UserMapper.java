@@ -2,8 +2,10 @@ package com.ecomerce.userws.mapper;
 
 import com.ecomerce.userws.dto.User;
 import com.ecomerce.userws.dto.UserRequest;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
-@Mappper
+@Mapper
 public interface UserMapper {
 
     UserMapper INSTANCIA= Mappers.getMapper(UserMapper.class);
@@ -11,3 +13,4 @@ public interface UserMapper {
     UserRequest userToUserDto(User persona);
 
 }
+
