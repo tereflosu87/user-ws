@@ -2,6 +2,7 @@ package com.ecomerce.userws.services;
 
 import com.ecomerce.userws.dto.User;
 import com.ecomerce.userws.repositories.UserRepositoy;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,8 +14,12 @@ public class UserServiceImpl implements UserService {
         this.userRepositoy = userRepositoy;
     }
 
-    @Override
-    public User saveUser(User user) {
-        return userRepositoy.save(user);
+
+    public User findByName(String name) {
+        return userRepositoy.findByName(name);
+    }
+
+    public Boolean exitsUser(String dni){
+        return userRepositoy.existsById(Long.valueOf(dni));
     }
 }

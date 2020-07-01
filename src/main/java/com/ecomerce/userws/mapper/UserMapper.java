@@ -1,16 +1,14 @@
 package com.ecomerce.userws.mapper;
 
 import com.ecomerce.userws.dto.User;
-import com.ecomerce.userws.dto.UserDTO;
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
+import com.ecomerce.userws.dto.UserRequest;
 
-@Mapper
+//@Mapper
 public interface UserMapper {
 
-    UserMapper instance= Mappers.getMapper(UserMapper.class);
+   // UserMapper instance= Mappers.getMapper(UserMapper.class);
 
-    UserDTO userToUserDto(User persona);
+    UserRequest userToUserDto(User persona);
 
 }
 

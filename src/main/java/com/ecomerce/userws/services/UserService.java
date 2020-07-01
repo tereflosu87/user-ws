@@ -4,6 +4,9 @@ import com.ecomerce.userws.dto.User;
 
 public interface UserService {
 
-    User saveUser (User user);
+    User findByName (String name);
+
+    Boolean exitsUser(String dni);
+
 
 }
